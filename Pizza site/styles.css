@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #d32f2f;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    display: inline-block;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    background-image: url('pizza-banner.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    background-color: #f57c00;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.menu-section {
+    padding: 50px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.menu-section h2 {
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.menu-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: #ffe0b2;
+    padding: 20px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.menu-item h3 {
+    margin-bottom: 10px;
+}
+
+.contact-section {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input[type="text"], form input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #b71c1c;
+}

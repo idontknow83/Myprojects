@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Pizza Paradise</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Welcome to the Best Pizza in Town!</h2>
+            <p>Fresh, Hot, and Delicious Pizza Delivered Right to Your Door.</p>
+            <a href="#menu" class="btn" id="orderNowBtn">Order Now</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h3>Margherita</h3>
+                    <p>Tomato sauce, mozzarella, and fresh basil</p>
+                    <p>€8.50</p>
+                    <input type="number" id="margheritaQty" min="0" value="0">
+                </div>
+                <div class="menu-item">
+                    <h3>Pepperoni</h3>
+                    <p>Tomato sauce, mozzarella, and pepperoni</p>
+                    <p>€9.50</p>
+                    <input type="number" id="pepperoniQty" min="0" value="0">
+                </div>
+                <div class="menu-item">
+                    <h3>BBQ Chicken</h3>
+                    <p>BBQ sauce, chicken, onions, and mozzarella</p>
+                    <p>€10.00</p>
+                    <input type="number" id="bbqQty" min="0" value="0">
+                </div>
+                <div class="menu-item">
+                    <h3>Vegetarian</h3>
+                    <p>Tomato sauce, mozzarella, peppers, onions, and mushrooms</p>
+                    <p>€9.00</p>
+                    <input type="number" id="vegetarianQty" min="0" value="0">
+                </div>
+            </div>
+            <button class="btn" id="calculateTotalBtn">Calculate Total</button>
+            <p id="totalPrice">Total Price: €0.00</p>
+        </div>
+    </section>
+    <form id="orderForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required>
+
+        <label for="address">Delivery Address:</label>
+        <input type="text" id="address" required>
+
+        <button type="submit" class="btn">Submit Order</button>
+    </form>
+            <section id="contact" class="contact-section">
+                <div class="container">
+                    <h2>Contact Us</h2>
+                    <p>123 Pizza Street, Flavor Town</p>
+                    <p>Email: info@pizzaparadise.com</p>
+                    <p>Phone: 0123-456789</p>
+            
+                    <h3>Place Your Order</h3>
+                    
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Pizza Paradise. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+       
+        document.getElementById('orderNowBtn').addEventListener('click', function() {
+            alert('Thank you for choosing Pizza Paradise! Your order is on the way.');
+        });
+
+       
+        document.getElementById('calculateTotalBtn').addEventListener('click', function() {
+          
+            const margheritaPrice = 8.50;
+            const pepperoniPrice = 9.50;
+            const bbqPrice = 10.00;
+            const vegetarianPrice = 9.00;
+
+            const margheritaQty = parseInt(document.getElementById('margheritaQty').value);
+            const pepperoniQty = parseInt(document.getElementById('pepperoniQty').value);
+            const bbqQty = parseInt(document.getElementById('bbqQty').value);
+            const vegetarianQty = parseInt(document.getElementById('vegetarianQty').value);
+
+       
+            const totalPrice = (margheritaQty * margheritaPrice) + 
+                               (pepperoniQty * pepperoniPrice) + 
+                               (bbqQty * bbqPrice) + 
+                               (vegetarianQty * vegetarianPrice);
+
+            document.getElementById('totalPrice').textContent = `Total Price: €${totalPrice.toFixed(2)}`;
+        });
+      a
+function changeHeroBackgroundColor() {
+    const colors = ['#f44336', '#e91e63', '#9c27b0', '#673ab7', '#3f51b5'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+    document.querySelector('.hero').style.backgroundColor = randomColor;
+}
+
+document.getElementById('orderForm').addEventListener('submit', function(event) {
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+
+    
+    alert(`Order received! \nName: ${name} \nPhone: ${phone} \nDelivery Address: ${address}`);
+});
+
+
+
+window.onload = changeHeroBackgroundColor;
+    </script>
+</body>
+</html>
